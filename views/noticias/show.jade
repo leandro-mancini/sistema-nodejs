@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	h1 #{value.titulo}
+	br
+	p Texto: #{value.texto}
+	br
+	em Data de Cadastro: #{value.data_cad}
+	br
+	br
+	img(src="/public/images/upload/#{value.image}")
+	br
+	br
+	form(name="cadNoticias", action="/noticias/delete/#{value._id}", method="POST")
+		input(type="hidden" name="_method" value="delete")
+		input(type="submit", value="Excluir", class="btn btn-danger")
+		&nbsp
+		a(href="/noticias" title="Voltar", class="btn btn-warning") Voltar

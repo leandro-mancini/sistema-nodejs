@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+	h1 #{value.nome}
+	br
+	p ID: #{value._id}
+	p Login: #{value.login}
+	p Senha: #{value.senha}
+	p Data de Cadastro: #{value.data_cad}
+	br
+	form(name="cadCliente", action="/usuarios/delete/#{value._id}", method="POST")
+		input(type="hidden" name="_method" value="delete")
+		input(type="submit", value="Excluir", class="btn btn-danger")
+		&nbsp
+		a(href="/usuarios" title="Voltar", class="btn btn-warning") Voltar

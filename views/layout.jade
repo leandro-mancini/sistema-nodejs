@@ -1,0 +1,39 @@
+doctype html5
+html
+	head
+		title #{title}
+
+		link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/normalize.css')
+		link(rel='stylesheet', href='/stylesheets/demo.css')
+		link(rel='stylesheet', href='/stylesheets/icons.css')
+		link(rel='stylesheet', href='/stylesheets/style5.css')
+
+		script(src='/javascripts/jquery-1.8.0.min.js')
+	body
+		nav(id="bt-menu" class="bt-menu")
+			a(href="javascript:;" class="bt-menu-trigger")
+				span Menu
+			ul
+				li
+					a(href="/usuarios") Usuários
+				li
+					a(href="/noticias") Notícias
+				li
+					a(href="/sair") Sair
+			ul
+				li
+					a(href="https://plus.google.com/100319704619911389782" target="_blank" title="Google+" class="bt-icon icon-gplus") Google+
+				li
+					a(href="https://www.facebook.com/leandro.mancini.56" target="_blank" title="Facebook" class="bt-icon icon-facebook") Facebook
+				li
+					a(href="https://github.com/leandro-mancini" target="_blank" title="GitHub" class="bt-icon icon-github") GitHub
+		div(class="container")
+			block content
+
+			footer
+				p Desenvolvido por 
+					b Leandro Mancini
+		script(src='/javascripts/classie.js')
+		script(src='/javascripts/borderMenu.js')

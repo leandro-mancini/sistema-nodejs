@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+	h1 Gerenciamento de Noticias
+	br
+	br
+	if messages.info
+		div(class="alert alert-info")
+			p #{messages.info}
+	br
+	table(class="table well" id="tb1")
+		thead
+			tr
+				th ID
+				th(style="width: 345px;") Titulo
+				th Imagem
+				th Data
+				th Ações
+		tbody
+			each valor, i in lista
+				tr(class="")
+					td #{valor._id}
+					td(style="width: 345px;") #{valor.titulo}
+					td
+						img(id='add-razaoSocial', class='input-img', src="/public/images/upload/#{valor.image}")
+					td #{valor.data_cad}
+					td
+						a(href="/noticias/show/#{valor._id}" title="Visualizar" class="btn btn-primary")
+							span(class="glyphicon glyphicon-search")
+						&nbsp
+						a(href="/noticias/edit/#{valor._id}" title="Editar" class="btn btn-info")
+							span(class="glyphicon glyphicon-pencil")
+	br
+	a(href="/noticias/create" title="Novo Usuario")
+		input(type="button", value="Novo Usuario" class="btn btn-default")

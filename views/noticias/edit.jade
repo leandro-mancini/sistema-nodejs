@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+	h1 Editar #{value.titulo}
+	hr
+	br
+	form(name="cadCliente", action="/noticias/edit/#{value._id}", method="POST")
+		input(type="hidden" name="_method" value="put")
+		div(class="form-group")
+			label Nome:
+			input(type="text", name="titulo", class="form-control" id="inputDefault", value="#{value.titulo}")
+			br
+			label Login:
+			input(type="text", name="texto", class="form-control", value="#{value.texto}")
+			br
+			br
+			input(type="submit", value="Atualizar", class="btn btn-primary")
+			&nbsp
+			a(href="/noticias" title="Cancelar", class="btn btn-danger") Cancelar

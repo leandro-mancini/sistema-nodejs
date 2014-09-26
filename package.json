@@ -1,0 +1,25 @@
+{
+  "name": "sistema",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "express-load": "*",
+    "jade": "*",
+    "stylus": "*",
+    "mongoose": "*",
+    "body-parser": "~1.8.1",
+    "nodemon": "*",
+    "express-flash": "*",
+    "connect": "~2.14.4"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "gulp-util": "^2.2.14",
+    "gulp": "^3.6.0",
+    "gulp-concat": "^2.2.0"
+  }
+}
