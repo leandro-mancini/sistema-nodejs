@@ -53,7 +53,7 @@ load('models').then('controllers').then('routes').into(app);
 
 
 // Servidor
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log("Servidor Rodando MyApp no http://localhost:3000/");
 });
 
